@@ -4,10 +4,10 @@ import {
     Nav,
     NavItem,
     NavLink
-} from 'reactstrap'
+} from 'reactstrap';
 
 const Header = () => {
-    return (
+    return(
         <header>
             <Navbar className='header'>
                 <NavbarBrand href='/'>
@@ -15,7 +15,7 @@ const Header = () => {
                 </NavbarBrand>
                 <Nav className='ml-auto' navbar>
                     <NavItem>
-                        <NavLink href='https://github.com/cblake35/React.git'>
+                        <NavLink href='https://github.com/cblake35/React'>
                             GitHub
                         </NavLink>
                     </NavItem>
@@ -24,3 +24,5 @@ const Header = () => {
         </header>
     )
 }
+
+export default Header;
