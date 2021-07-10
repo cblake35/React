@@ -1,5 +1,6 @@
 import { useState } from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import FunctionalComponent from "./PropsDemoChild";
 
 const PropsDemo = () => {
 
@@ -50,24 +51,6 @@ const PropsDemo = () => {
 
 export default PropsDemo;
 
-const FunctionalComponent = (props) => {
-    return (
-        <div>
-            <p>{props.string}</p>
-            <button onClick={props.function}>Press Me!</button>
-            {/* <p>The current selected style is : {props.selectedStyle}</p> */}
-            <TinyComponent selectedStyle={props.selectedStyle} />
-        </div>
-    )
-}
-
-const TinyComponent = (props) => {
-    return(
-        <div>
-            <p>The current style is : {props.selectedStyle}</p>
-        </div>
-    )
-}
 
 /* PropTypes 
 -they let you control exactly the type of prop passed between components.
