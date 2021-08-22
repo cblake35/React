@@ -18,9 +18,25 @@ export default class ClassComponentProps extends Component {
         )
         console.log(this.state.fruitArray)
     }
+    /* REACT LIFECYCLES */
+    
+    componentDidMount = () => { //invoked immediately after components have been rendered, only runs once after invocation
+        console.log('Components have mounted')
+    }
 
+    componentDidUpdate = () => { //invoked immediately after an update occurs whether it is a change of state or props
+        console.log('Components have been updated')
+    }
 
+    // shouldComponentUpdate = () => { //returning false will prevent componentDidUpdate to trigger a re-render i.e it wont be called
+    //     return false
+    // }
 
+    componentWillUnmount = () => { //is called right before a component is unmounted and destroyed, called once. Any necessary cleanup will be performed in this method.
+        console.log('Components have been unmounted')
+    }
+
+    
     render() {
         console.log(this.state.fruitArray)
         return (
